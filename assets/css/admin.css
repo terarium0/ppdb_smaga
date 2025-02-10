@@ -1,0 +1,698 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    background: #dfe6e9;
+}
+
+/* sidebar */
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 20px 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    /* transition: all 0.5s linear; */
+    background: #239b56;
+    transition: 0.5s;
+}
+.sidebar:hover {
+    width: 350px;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+.menu {
+    height: 100%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+.menu a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.menu a span {
+    overflow: hidden;
+}
+.menu a i {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    margin-right: 45px;
+    display: block;
+    text-align: center;
+    line-height: 25px;
+}
+.logout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* sidebar */
+
+/* main bodyz section */
+.main--content {
+    position: relative;
+    background: #dfe6e9;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--wrapper .menu-btn {
+    display: none;
+    /* width: 40px;
+    height: 40px; */
+    /* background-color: #239b56; */
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    color: #239b56;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.header--wrapper .menu-btn span {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.header--title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #239b56;
+}
+
+/* .user--info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.searh--box {
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: #239b56;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.searh--box input {
+    background: transparent;
+    padding: 10px;
+}
+.searh--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.searh--box i:hover {
+    transform: scale(1.2);
+}
+.user-profile {
+    color: #239b56;
+    font-size: 50px !important;
+} */
+/* main body section*/
+
+/* card container */
+.card--container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: stretch; */
+    gap: 10px;
+}
+.card--wrapper a {
+    flex-basis: auto;
+    flex-grow: 2;
+}
+.main--title {
+    color: #239b56;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.payment--card {
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 100%;
+    /* max-width: 320px; */
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    gap: 20px;
+}
+.payment--card:hover {
+    transform: translate(-5px);
+}
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 20px;
+    font-family: "inter", serif;
+    font-weight: 600;
+    color: black;
+}
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+/* card container */
+
+/* list & tabel */
+.list--wrapper {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.list--wrapper table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.list--wrapper table tr th,
+.list--wrapper table tr td {
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* tombol ubah data */
+.ubah-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ubah-data button {
+    padding: 10px;
+    background-color: #239b56;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ubah-data button:nth-child(2) {
+    background-color: #ff2929;
+}
+
+.main--title {
+    color: #239b56;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.table-title {
+    font-size: 20px;
+}
+
+.list--container .list li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.list--container .list li p {
+    flex: 1;
+    text-align: center;
+}
+.list--container .list li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.list--container .list li div .material-symbols-outlined {
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+}
+/* end list */
+
+/* color css */
+.light-red {
+    background: rgb(251, 233, 233);
+}
+.ligth-purple {
+    background: rgb(235, 254, 235);
+}
+.light-blue {
+    background: rgb(236, 236, 254);
+}
+.dark-red {
+    background: #ff2929;
+}
+.dark-purple {
+    background: purple;
+}
+.dark-green {
+    background: #239b56;
+}
+.dark-blue {
+    background: #133e87;
+}
+/* color css */
+
+/* list biodata user */
+.list--biodata tbody {
+    border-collapse: collapse;
+}
+.list--biodata {
+    width: 100%;
+    padding: 3px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+/* end list biodata user */
+
+/* formulir pendaftaran */
+.form-pendaftaran {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* tombol tambah pengguna */
+.btn-tambah {
+    position: relative;
+    width: 50px;
+    height: 60px;
+    box-shadow: #575757;
+}
+
+.btn-tambah-user {
+    position: absolute;
+    background-color: #239b56;
+    color: #fff;
+    top: 10px;
+    left: 100vh;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+/* end tambah pengguna */
+
+.btn-tambah-user:hover {
+    background-color: #239b56;
+}
+/* end formulir pendaftaran */
+
+/* Formulir  */
+.formulir {
+    max-width: 900px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.form-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.form-head h3 {
+    padding: 0;
+}
+.form-head button {
+    padding: 10px 18px;
+    background-color: #239b56;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+.formulir .kolom-isi {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.formulir .kolom-isi input,
+.formulir .kolom-isi textarea,
+.formulir .kolom-isi select {
+    padding: 10px;
+    background-color: #dfe6e9;
+    border-radius: 5px;
+}
+.formulir .kolom-isi textarea {
+    height: 150px;
+    resize: none;
+}
+.formulir .tombol-form {
+    display: flex;
+    gap: 10px;
+}
+.formulir .tombol-form button {
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 0;
+    border: 2px solid #239b56;
+}
+.formulir .tombol-form button:nth-child(1) {
+    background-color: #fff;
+}
+.formulir .tombol-form button:nth-child(2) {
+    color: #fff;
+    background-color: #239b56;
+}
+/* end formulir */
+
+/* Pengumuman/Berita */
+.formulir .kolom-isi.berita .tombol-berita {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.formulir .kolom-isi.berita .tombol-berita button {
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #239b56;
+}
+.formulir .kolom-isi.berita .tombol-berita button:nth-child(1) {
+    background-color: #fff;
+    color: #239b56;
+}
+.formulir .kolom-isi.berita .tombol-berita button:nth-child(2) {
+    color: #fff;
+    background-color: #239b56;
+}
+
+#buat-berita {
+    display: none;
+}
+#buat-berita.show {
+    display: block;
+}
+
+.formulir .hasil {
+    background-color: #dfe6e9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.formulir .hasil h3 {
+    margin-bottom: 15px;
+}
+.formulir .hasil p {
+    text-align: justify;
+}
+.formulir .hasil button,
+.formulir .kolom-isi.berita button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff2929;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* End Pengumuman/Berita */
+
+/* Setting Profile */
+
+.profile--setting {
+    width: 10px;
+    height: 50px;
+}
+/* end Setting Profile */
+
+/* Menu MObile */
+/* .menu-mobile {
+    margin: 0;
+    display: none;
+    z-index: 1;
+} */
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .list--wrapper table thead {
+        border: none;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .list--wrapper table tr {
+        display: block;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    .list--wrapper table td {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dee5d9;
+        padding: 10px !important;
+    }
+    .list--wrapper table td .text-wrap {
+        text-align: right;
+        margin: 0;
+    }
+    .list--wrapper table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        width: 100px;
+        text-align: left;
+        text-wrap: wrap;
+        color: #239b56;
+    }
+    .list--wrapper table td.ubah-data {
+        justify-content: space-between !important;
+    }
+    .list--wrapper table td.ubah-data::before {
+        flex: 1;
+    }
+    .list--wrapper table td:last-child {
+        border: none;
+    }
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* Responsive Tablet */
+@media (max-width: 768px) {
+    .sidebar {
+        width: px;
+        background: #239b56;
+        transition: all 0.5s ease;
+    }
+
+    .sidebar:hover {
+        width: 250px;
+        left: 0;
+    }
+
+    .header--wrapper {
+        table-layout: fixed;
+    }
+
+    .card--container {
+        table-layout: fixed;
+    }
+
+    .menu a {
+        font-size: 14px;
+        width: 150px;
+    }
+
+    .list--wrapper table {
+        table-layout: fixed;
+    }
+
+    /* .menu a i {
+        margin-right: 20px;
+    } */
+}
+
+/* Responsive handphone 480 revisi */
+@media screen and (max-width: 550px) {
+    body {
+        flex-direction: column;
+    }
+
+    .header--wrapper .menu-btn {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #239b56;
+        margin: 0;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        padding: 0;
+        padding-top: 30px;
+        position: fixed;
+        transition: 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    .menu-mobile a {
+        color: white;
+        padding: 15px 20px;
+        text-decoration: none;
+        text-align: left;
+        border-bottom: 1px solid #444;
+    }
+    .menu-mobile a i {
+        margin-right: 10px;
+    }
+
+    .menu-mobile a:hover {
+        background-color: #575757;
+    }
+
+    .menu-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-mobile.active {
+        display: flex;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .sidebar {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        transform: translate(-100%);
+    }
+
+    .sidebar .menu {
+        display: block;
+    }
+
+    .main--content {
+        margin: 0;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 80% !important;
+
+        transition: 0.5s ease;
+        background-color: #ff2929;
+        box-shadow: 0px 5px 20px;
+    }
+}
+/* end Responsive handphone 480 revisi */
